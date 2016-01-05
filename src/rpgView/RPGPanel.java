@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import rpgModel.Monster;
 import rpgController.RPGAppController;
 import javax.swing.event.ChangeListener;
+import rpgModel.Goblin;
 
 public class RPGPanel extends JPanel
 {
@@ -18,8 +19,8 @@ public class RPGPanel extends JPanel
 	private JButton attackButton;
 	private JLabel health;
 	private JCheckBox mobStats;
-	private JLabel name;
-	private JLabel description;
+	private JLabel nameLabel;
+	private JLabel descriptionLabel;
 	
 	public RPGPanel(RPGAppController baseController)
 	{
@@ -28,8 +29,8 @@ public class RPGPanel extends JPanel
 		attackButton = new JButton("ATTACK");
 		health = new JLabel("20/20");
 		mobStats = new JCheckBox("Show monster's stats");
-		name = new JLabel("the name");
-		
+		nameLabel = new JLabel(String name);
+		descriptionLabel = new Jlabel(String description)
 		
 		
 		//setupComboBox();
@@ -44,8 +45,8 @@ public class RPGPanel extends JPanel
 		this.setBackground(Color.ORANGE);
 		this.add(attackButton);
 		this.add(mobStats);
-		this.add(name);
-		this.add(description)
+		this.add(nameLabel);
+		this.add(descriptionLabel)
 	}
 	
 	private void setupLayout()
